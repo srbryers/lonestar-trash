@@ -7,6 +7,21 @@
         "padding_bottom": 36
       }
     },
+    "hero": {
+      "type": "rich-text",
+      "settings": {
+        "blocks": [
+          {
+            "type": "hero_heading",
+            "settings": {
+              "heading": "Contact Us",
+              "heading_size": "h1",
+              "color_scheme": "scheme-1"
+            }
+          }
+        ]
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -20,6 +35,7 @@
   },
   "order": [
     "main",
+    "hero",
     "form"
   ]
 }
