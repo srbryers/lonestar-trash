@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 24,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "video_6HjwRN": {
+      "type": "video",
+      "settings": {
+        "heading": "Our Story",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/youtu.be\/03lntRIvSBo",
+        "cover_image": "shopify:\/\/shop_images\/mqdefault_6s.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "featured_collection",
+    "video_6HjwRN"
+  ]
+}
