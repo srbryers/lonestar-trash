@@ -8,26 +8,11 @@
       }
     },
     "hero": {
-      "type": "rich-text",
-      "blocks": {
-        "hero_heading_JANG4y": {
-          "type": "hero_heading",
-          "settings": {
-            "heading": "Merch Dump",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "hero_heading_JANG4y"
-      ],
+      "type": "hero-heading",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "heading": "Merch Dump",
+        "heading_size": "h1",
+        "animations_reveal_on_scroll": true
       }
     },
     "form": {
