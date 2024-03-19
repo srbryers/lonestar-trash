@@ -16,7 +16,7 @@
     "countdown": {
       "type": "countdown",
       "settings": {
-        "end_date": "2024-06-30",
+        "end_date": "2024-04-1",
         "end_time": "00:00:00"
       }
     },
@@ -28,8 +28,8 @@
         "text_alignment": "center",
         "content_width": 640,
         "font_size": 18,
-        "padding_top": 16,
-        "padding_bottom": 20
+        "padding_top": 28,
+        "padding_bottom": 32
       }
     },
     "newsletter": {
