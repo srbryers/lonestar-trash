@@ -5,7 +5,7 @@
     leading-trim: both;
     text-edge: cap;
     font-family: 'council', 'Council OT', 'Council', serif;
-    font-size: 17vw;
+    font-size: {{ section.settings.font_size }};
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -79,36 +79,10 @@
       "default": false
     },
     {
-      "type": "select",
-      "id": "heading_size",
-      "label": "Heading Size",
-      "default": "h1",
-      "options": [
-        {
-          "value": "h1",
-          "label": "Heading 1"
-        },
-        {
-          "value": "h2",
-          "label": "Heading 2"
-        },
-        {
-          "value": "h3",
-          "label": "Heading 3"
-        },
-        {
-          "value": "h4",
-          "label": "Heading 4"
-        },
-        {
-          "value": "h5",
-          "label": "Heading 5"
-        },
-        {
-          "value": "h6",
-          "label": "Heading 6"
-        }
-      ]
+      "type": "text",
+      "id": "font_size",
+      "label": "Font Size",
+      "default": "17vw"
     },
     {
       "type": "checkbox",
