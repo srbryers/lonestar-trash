@@ -55,9 +55,15 @@
         }
       }
     </style>
+
+    {% if template.name != 'index' %}
+      <script>
+        window.location.replace('/');
+      </script>
+    {% endif %}
   </head>
 
-  <body id="main" style="margin: 0;" class="template-{{ template.suffix }}">
+  <body id="main" style="margin: 0;" class="template-{{ template.name }}">
     <div class="section">
       {% sections 'landing-header-group' %}
     </div>
