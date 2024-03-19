@@ -7,7 +7,7 @@
       "settings": {
         "heading": "MERCH DUMP",
         "padding_top": 0,
-        "padding_bottom": 40,
+        "padding_bottom": 20,
         "full_width": false,
         "font_size": "13vw",
         "animations_reveal_on_scroll": true
