@@ -1,4 +1,13 @@
-
+{%- style -%}
+.landing-newsletter {
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: {{ section.settings.content_width }}px;
+  margin: 0 auto;
+  padding: {{ section.settings.top_padding }}px {{ section.settings.right_padding }}px {{ section.settings.bottom_padding }}px {{ section.settings.left_padding }}px;
+}
+{%- endstyle -%}
 
 <div class="landing-newsletter">
   {%- if section.settings.embed_code -%}{{ section.settings.embed_code }}{%- endif -%}
@@ -22,6 +31,48 @@
       "min": 320,
       "max": 1280,
       "step": 16
+    },
+    {
+      "type": "range",
+      "id": "top_padding",
+      "label": "Top padding",
+      "default": 0,
+      "min": 0,
+      "max": 120,
+      "step": 4
+    },
+    {
+      "type": "range",
+      "id": "bottom_padding",
+      "label": "Bottom padding",
+      "default": 0,
+      "min": 0,
+      "max": 120,
+      "step": 4
+    },
+    {
+      "type": "range",
+      "id": "left_padding",
+      "label": "Left padding",
+      "default": 20,
+      "min": 0,
+      "max": 120,
+      "step": 4
+    },
+    {
+      "type": "range",
+      "id": "right_padding",
+      "label": "Right padding",
+      "default": 20,
+      "min": 0,
+      "max": 120,
+      "step": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter",
+      "category": "Newsletter"
     }
   ]
 }
