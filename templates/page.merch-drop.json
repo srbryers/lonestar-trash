@@ -6,6 +6,9 @@
       "type": "landing-hero-text",
       "settings": {
         "heading": "MERCH DUMP",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "full_width": false,
         "heading_size": "h1",
         "animations_reveal_on_scroll": true
       }
@@ -22,12 +25,21 @@
       "settings": {
         "title": "",
         "text": "<p>The Lone Star truck is rolling up with a different kind of trashy drip! Want to get your mitts on the finest trash-forward fashion? Sign up below to be first in the know—because this is one collection day you definitely don't want to miss.<\/p>",
-        "font_size": 22
+        "text_alignment": "center",
+        "content_width": 640,
+        "font_size": 22,
+        "padding_top": 32,
+        "padding_bottom": 40
       }
     },
     "newsletter": {
       "type": "landing-newsletter",
+      "custom_css": [
+        "iframe {margin: 0 auto; display: inline-block;}"
+      ],
       "settings": {
+        "embed_code": "<iframe src=\"https:\/\/embeds.beehiiv.com\/0ec3e9dd-eacc-40d6-a614-8ec8bbdb9981?slim=true\" data-test-id=\"beehiiv-embed\" height=\"52\" frameborder=\"0\" scrolling=\"no\" style=\"margin: 0; border-radius: 0px !important; background-color: transparent;\"><\/iframe>",
+        "content_width": 640
       }
     }
   },
