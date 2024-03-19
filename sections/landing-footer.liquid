@@ -31,7 +31,7 @@
 
 <footer id="footer-basic">
   <div class="footer-image">
-    <img src="{{ section.settings.image | img_url: 'master' }}" alt="Footer Image" />
+    {%- if section.settings.image -%}<img src="{{ section.settings.image | img_url: 'master' }}" alt="Footer Image" />{%- endif -%}
   </div>
   <div class="footer-text">
     <div class="left_text">
