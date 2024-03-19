@@ -1,0 +1,28 @@
+
+
+<div class="landing-newsletter">
+  {%- if section.settings.embed_code -%}{{ section.settings.embed_code }}{%- endif -%}
+</div>
+
+{%- schema -%}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "html",
+      "id": "embed_code",
+      "label": "Newsletter Embed Code",
+      "info": "Paste your newsletter embed code here."
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content width",
+      "default": 640,
+      "min": 320,
+      "max": 1280,
+      "step": 16
+    }
+  ]
+}
+{%- endschema -%}

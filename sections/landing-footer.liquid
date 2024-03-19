@@ -1,7 +1,7 @@
 {%- style -%}
   #footer-basic {
     width: 100%;
-    padding: 48px 28px;
+    padding: 0 40px 20px;
     box-sizing: border-box;
   }
   #footer-basic .footer-image {
@@ -21,11 +21,26 @@
   #footer-basic div {
     color: var(--Black, #000);
     text-align: center;
-    font-family: 'Halyard Text';
+    font-family: 'halyard-text', 'Halyard Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+  }
+  @media (max-width: 768px) {
+    #footer-basic {
+      padding: 0;
+    }
+    #footer-basic .footer-image {
+      overflow: hidden;
+    }
+    #footer-basic .footer-image img {
+      width: auto;
+      height: 264px;
+    }
+    #footer-basic .footer-text {
+      padding: 0 20px;
+    }
   }
 {%- endstyle -%}
 

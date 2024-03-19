@@ -2,7 +2,7 @@
   "layout": "landing",
   "sections": {
     "hero": {
-      "type": "hero-heading",
+      "type": "landing-hero-text",
       "settings": {
         "heading": "MERCH DUMP",
         "heading_size": "h1",
@@ -15,10 +15,23 @@
         "end_date": "2024-06-30",
         "end_time": "00:00:00"
       }
+    },
+    "feature_text": {
+      "type": "landing-feature-text",
+      "settings": {
+        "title": "",
+        "text": "<p>Ready to dive headfirst into the dumpster of style? Sign up now to be the first to know when new trashy treasures hit the scene.</p>",
+        "font_size": 22
+      }
+    },
+    "newsletter": {
+      "type": "landing-newsletter"
     }
   },
   "order": [
     "hero",
-    "countdown"
+    "countdown",
+    "feature_text",
+    "newsletter"
   ]
 }

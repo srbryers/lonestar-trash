@@ -1,16 +1,25 @@
+<!doctype html>
 <html>
   <head>
     {{  content_for_header }}
-  </head>
 
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="https://use.typekit.net/fod0bmg.css">
+
+  </head>
   
-  
-  <body id="main">
-    {% sections 'landingHeader-group' %}
+
+  <body id="main" style="margin: 0;">
+
+    {% sections 'landing-header-group' %}
+
     <div class="landing-page">
       {{ content_for_layout }}
     </div>
-    {% sections 'landingFooter-group' %}
+
+    {% sections 'landing-footer-group' %}
+    
   </body>
 
   

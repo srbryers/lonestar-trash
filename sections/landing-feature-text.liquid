@@ -1,0 +1,75 @@
+{%- style -%}
+  .landing-feature-text {
+    padding: 24px 20px;
+    margin: 0 auto;
+    text-align: {{ section.settings.text_alignment }};
+    max-width: {{ section.settings.content_width }}px;
+    font-family: "halyard-text", "halyard-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .landing-feature-content {
+    font-size: {{ section.settings.font_size }}px;
+  }
+{%- endstyle -%}
+<div class="landing-feature-text">
+  <div class="landing-feature-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  <div class="landing-feature-content">
+    {{ section.settings.text }}
+  </div>
+</div>
+
+{%- schema -%}
+{
+  "name": "Landing Feature Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content Width",
+      "default": 640,
+      "min": 320,
+      "max": 1280,
+      "step": 16
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font Size",
+      "default": 16,
+      "min": 8,
+      "max": 60,
+      "step": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Feature",
+      "category": "Landing",
+      "settings": {
+        "title": "Landing Feature",
+        "text": "<p>Text</p>",
+        "text_alignment": "center"
+      }
+    }
+  ]
+}
+{%- endschema -%}
