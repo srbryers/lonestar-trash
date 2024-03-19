@@ -1,0 +1,33 @@
+{%- style -%}
+  .header-image {
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    width: 132px;
+    margin: 0 auto;
+  }
+  .header-image img {
+    max-width: 100%;
+    height: auto;
+  }
+{%- endstyle -%}
+
+<header>
+  <div class="header-image">
+    <img src="{{ section.settings.header_image | img_url: 'master' }}" alt="Header Image" />
+  </div>
+</header>
+
+{%- schema -%}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Image",
+      "info": "The image that will be displayed in the header."
+    }
+  ]
+}
+{%- endschema -%}
