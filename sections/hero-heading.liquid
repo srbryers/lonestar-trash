@@ -1,5 +1,29 @@
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <h1 
+{%- style -%}
+  .hero-heading {
+    color: var(--Orange, #e36e00);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Council OT';
+    font-size: 17vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 5.72px;
+    margin: 48px;
+  }
+
+  @media (max-width: 480px) {
+    .hero-heading {
+      font-size: 160px;
+      line-height: 80%;
+      letter-spacing: 3.2px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="isolate {% unless section.settings.full_width %} page-width{% endunless %}">
+  <h1
     class="hero-heading {{ section.settings.heading_size }} {% if section.settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {{ section.shopify_attributes }}
     {% if section.settings.animations_reveal_on_scroll %}
@@ -32,12 +56,30 @@
       "label": "Heading Size",
       "default": "h1",
       "options": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
       ]
     },
     {

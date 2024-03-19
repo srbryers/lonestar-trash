@@ -1,0 +1,53 @@
+{%- style -%}
+  #footer-basic {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 100%;
+    padding: 48px 28px;
+  }
+  #footer-basic div {
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: "Halyard Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; 
+  }
+{%- endstyle -%}
+
+<footer id="footer-basic">
+  <div class="left_text">
+    {{ section.settings.left_text }}
+  </div>
+  <div class="right_text">
+    {{ section.settings.right_text }}
+  </div>
+</footer>
+
+{%- schema -%}
+  {
+    "name": "Footer (Basic)",
+    "settings": [
+      {
+        "type": "text",
+        "id": "left_text",
+        "label": "Text (Left Column)",
+        "default": "© 2024 Lone Star Trash"
+      },
+      {
+        "type": "text",
+        "id": "right_text",
+        "label": "Text (Right Column)",
+        "default": "Powered by ONBOX"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Image to display in the footer"
+      }
+    ]
+  }
+{%- endschema -%}
