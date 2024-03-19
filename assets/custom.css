@@ -1,0 +1,4 @@
+html, body {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}

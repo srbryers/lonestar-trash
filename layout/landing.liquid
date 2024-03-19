@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="template-{{ template.suffix }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,18 +30,7 @@
     <style>
       .template-merch-drop {
         position: relative;
-        background-color: #f3efe7;
-      }
-      .template-merch-drop:before {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://cdn.shopify.com/s/files/1/0644/4292/5253/files/texture-scrub_2.png?v=1710819303');
-        opacity: 0.01;
+        background: url('https://cdn.shopify.com/s/files/1/0644/4292/5253/files/BG_Optimized.jpg?v=1710872352');
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -49,7 +38,7 @@
   </head>
 
   <body id="main" style="margin: 0;">
-    <div class="template-{{ template.suffix }}">
+    <div>
       {% sections 'landing-header-group' %}
 
       <div class="landing-page">
