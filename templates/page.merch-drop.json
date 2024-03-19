@@ -1,5 +1,6 @@
 {
   "layout": "landing",
+  "wrapper": "div.template-landing-page",
   "sections": {
     "hero": {
       "type": "landing-hero-text",
