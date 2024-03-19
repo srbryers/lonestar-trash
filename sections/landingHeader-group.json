@@ -3,7 +3,10 @@
   "type": "custom.header",
   "sections": {
     "header": {
-      "type": "landing-header"
+      "type": "landing-header",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/LoneStar-Text-Textured_Black.png"
+      }
     }
   },
   "order": [
