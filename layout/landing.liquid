@@ -3,13 +3,16 @@
     {{  content_for_header }}
   </head>
 
-  {% sections 'landing-header-group' %}
+  
   
   <body id="main">
+    {% sections 'landingHeader-group' %}
     <div class="landing-page">
       {{ content_for_layout }}
     </div>
+    {% sections 'landingFooter-group' %}
   </body>
 
-  {% sections 'landing-footer-group' %}
+  
+
 </html>
