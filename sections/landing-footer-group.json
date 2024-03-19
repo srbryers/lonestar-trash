@@ -5,11 +5,13 @@
     "footer": {
       "type": "landing-footer",
       "custom_css": [
-        "img {margin-top: -30px;}"
+        "img {margin-top: -30px;}",
+        "a {color: black; text-decoration: none; transition: all 0.3s ease-in-out;}",
+        "a:hover {opacity: 0.7;}"
       ],
       "settings": {
         "left_text": "© 2024 Lone Star Trash",
-        "right_text": "Powered by ONBOX",
+        "right_text": "<a href=\"https:\/\/www.onboxcreative.com\" target=\"_blank\" title=\"https:\/\/www.onboxcreative.com\">Powered by ONBOX<\/a>",
         "image": "shopify:\/\/shop_images\/6ed4f9e68dba8ee2b43fc236992681df.png"
       }
     }
