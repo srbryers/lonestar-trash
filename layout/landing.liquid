@@ -17,9 +17,7 @@
     {{ 'custom.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="https://use.typekit.net/fod0bmg.css">
 
-    <title>
-      Lone Star Trash | Your mum's favourite trash company
-    </title>
+    <title>Lone Star Trash | Your mum's favourite trash company</title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
@@ -29,27 +27,43 @@
 
     <style>
       html {
-        height: 100vh; 
+        height: 100vh;
         overflow: scroll;
       }
       #main {
+        height: 100vh;
         background: url('https://cdn.shopify.com/s/files/1/0644/4292/5253/files/BG_Optimized.jpg?v=1710876527');
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+      }
+      @media (min-width: 769px) {
+        #main .section {
+          flex: 1;
+          text-align: center;
+        }
+        #main .section.footer {
+          display: flex;
+          align-items: flex-end;
+        }
       }
     </style>
   </head>
 
   <body id="main" style="margin: 0;" class="template-{{ template.suffix }}">
-    <div>
+    <div class="section">
       {% sections 'landing-header-group' %}
+    </div>
 
-      <div class="landing-page">
-        {{ content_for_layout }}
-      </div>
+    <div class="landing-page">
+      {{ content_for_layout }}
+    </div>
 
+    <div class="section footer">
       {% sections 'landing-footer-group' %}
     </div>
+
     <script type="text/javascript" async src="https://embeds.beehiiv.com/attribution.js"></script>
   </body>
 </html>
