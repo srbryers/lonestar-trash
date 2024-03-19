@@ -1,51 +1,56 @@
 {
+  "layout": "landing",
+  "wrapper": "div.template-landing-page",
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
+    "hero": {
+      "type": "landing-hero-text",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 24,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "heading": "MERCH DUMP",
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 20,
+        "full_width": false,
+        "font_size": "13vw",
+        "animations_reveal_on_scroll": true
       }
     },
-    "video_6HjwRN": {
-      "type": "video",
+    "countdown": {
+      "type": "countdown",
       "settings": {
-        "heading": "Our Story",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/youtu.be\/03lntRIvSBo",
-        "cover_image": "shopify:\/\/shop_images\/mqdefault_6s.webp",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "end_date": "2024-06-30",
+        "end_time": "00:00:00"
+      }
+    },
+    "feature_text": {
+      "type": "landing-feature-text",
+      "settings": {
+        "title": "",
+        "text": "<p>The Lone Star truck is rolling up with a different kind of trashy drip! Want to get your mitts on the finest trash-forward fashion? Sign up below to be first in the know—because this is one collection day you definitely don't want to miss.<\/p>",
+        "text_alignment": "center",
+        "content_width": 640,
+        "font_size": 18,
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "newsletter": {
+      "type": "landing-newsletter",
+      "custom_css": [
+        "iframe {margin: 0 auto; display: inline-block;}"
+      ],
+      "settings": {
+        "embed_code": "<iframe src=\"https:\/\/embeds.beehiiv.com\/0ec3e9dd-eacc-40d6-a614-8ec8bbdb9981?slim=true\" data-test-id=\"beehiiv-embed\" height=\"52\" width=\"100%\" frameborder=\"0\" scrolling=\"no\" style=\"margin: 0; border-radius: 0px !important; background-color: transparent;\"><\/iframe>",
+        "content_width": 640,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "left_padding": 20,
+        "right_padding": 20
       }
     }
   },
   "order": [
-    "featured_collection",
-    "video_6HjwRN"
+    "hero",
+    "countdown",
+    "feature_text",
+    "newsletter"
   ]
 }
