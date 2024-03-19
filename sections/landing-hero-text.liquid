@@ -10,7 +10,9 @@
     font-weight: 400;
     line-height: 100%;
     letter-spacing: 5.72px;
-    margin: 0 48px 48px;
+    margin: 0 48px 0;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 
   @media (max-width: 480px) {
@@ -49,6 +51,30 @@
       "id": "heading",
       "label": "Heading",
       "default": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
     },
     {
       "type": "select",

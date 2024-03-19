@@ -5,6 +5,8 @@
     box-sizing: border-box;
     width: 132px;
     margin: 0 auto;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
   .header-image img {
     max-width: 100%;
@@ -32,6 +34,30 @@
       "id": "header_image",
       "label": "Header Image",
       "info": "The image that will be displayed in the header."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
     }
   ],
   "presets": [
