@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="template-{{ template.suffix }}">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,10 @@
 
     <style>
       .template-merch-drop {
-        position: relative;
+        height: 100vh; 
+        overflow: scroll;
+      }
+      .template-merch-drop {
         background: url('https://cdn.shopify.com/s/files/1/0644/4292/5253/files/BG_Optimized.jpg?v=1710872352');
         background-size: cover;
         background-repeat: no-repeat;
@@ -37,7 +40,7 @@
     </style>
   </head>
 
-  <body id="main" style="margin: 0;">
+  <body id="main" style="margin: 0;" class="template-{{ template.suffix }}">
     <div>
       {% sections 'landing-header-group' %}
 
