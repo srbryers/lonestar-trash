@@ -1,11 +1,6 @@
 {
   "name": "Landing Page Header",
   "type": "header",
-  "sections": {
-    "header": {
-      "type": "landing-header"
-    }
-  },
   "order": [
     "header"
   ]
