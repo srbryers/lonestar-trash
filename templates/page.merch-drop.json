@@ -20,12 +20,14 @@
       "type": "landing-feature-text",
       "settings": {
         "title": "",
-        "text": "<p>Ready to dive headfirst into the dumpster of style? Sign up now to be the first to know when new trashy treasures hit the scene.</p>",
+        "text": "<p>Ready to dive headfirst into the dumpster of style? Sign up now to be the first to know when new trashy treasures hit the scene.<\/p>",
         "font_size": 22
       }
     },
     "newsletter": {
-      "type": "landing-newsletter"
+      "type": "landing-newsletter",
+      "settings": {
+      }
     }
   },
   "order": [
