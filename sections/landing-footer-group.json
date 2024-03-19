@@ -3,12 +3,7 @@
   "type": "custom.footer",
   "sections": {
     "footer": {
-      "type": "landing-footer",
-      "settings": {
-        "left_text": "© 2024 Lone Star Trash",
-        "right_text": "Powered by ONBOX",
-        "image": "shopify:\/\/shop_images\/6ed4f9e68dba8ee2b43fc236992681df.png"
-      }
+      "type": "landing-footer"
     }
   },
   "order": [
