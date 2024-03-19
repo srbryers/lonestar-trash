@@ -1,5 +1,6 @@
 {
   "layout": "landing",
+  "name": "Merch Drop",
   "sections": {
     "hero": {
       "type": "hero-heading",
