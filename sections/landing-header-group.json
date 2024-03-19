@@ -1,6 +1,14 @@
 {
   "name": "Landing Page Header",
   "type": "header",
+  "sections": {
+    "header": {
+      "type": "landing-header",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/6ed4f9e68dba8ee2b43fc236992681df.png"
+      }
+    }
+  },
   "order": [
     "header"
   ]

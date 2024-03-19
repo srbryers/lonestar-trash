@@ -14,7 +14,7 @@
 
 <header>
   <div class="header-image">
-    <img src="{{ section.settings.header_image | img_url: 'master' }}" alt="Header Image" />
+    {%- if section.settings.header_image %}<img src="{{ section.settings.header_image | img_url: 'master' }}" alt="Header Image" />{%- endif -%}
   </div>
 </header>
 
