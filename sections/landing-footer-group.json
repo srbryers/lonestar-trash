@@ -1,6 +1,6 @@
 {
   "name": "Landing Page Footer",
-  "type": "footer",
+  "type": "custom.footer",
   "sections": {
     "footer": {
       "type": "landing-footer",

@@ -1,6 +1,6 @@
 {
   "name": "Landing Page Header",
-  "type": "header",
+  "type": "custom.header",
   "sections": {
     "header": {
       "type": "landing-header",
