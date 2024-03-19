@@ -4,6 +4,9 @@
   "sections": {
     "footer": {
       "type": "landing-footer",
+      "custom_css": [
+        "img {margin-top: -30px;}"
+      ],
       "settings": {
         "left_text": "© 2024 Lone Star Trash",
         "right_text": "Powered by ONBOX",
