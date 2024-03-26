@@ -115,7 +115,7 @@
 
   function Countdown(options) {
     var target = document.querySelector(options.target);
-    var days = target.querySelector('[data-days]');
+    {%- if section.settings.show_days -%}var days = target.querySelector('[data-days]');{%- endif -%}
     var hours = target.querySelector('[data-hours]');
     var minutes = target.querySelector('[data-minutes]');
     var seconds = target.querySelector('[data-seconds]');
@@ -140,7 +140,7 @@
         var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var s = Math.floor((distance % (1000 * 60)) / 1000);
 
-        days.textContent = d < 10 ? '0' + d : d;
+        {%- if section.settings.show_days -%}days.textContent = d < 10 ? '0' + d : d;{%- endif -%}
         hours.textContent = h < 10 ? '0' + h : h;
         minutes.textContent = m < 10 ? '0' + m : m;
         seconds.textContent = s < 10 ? '0' + s : s;

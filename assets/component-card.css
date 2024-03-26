@@ -200,6 +200,10 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'halyard-display', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
 }
 
 .card__heading:last-child {
@@ -373,6 +377,9 @@
 
 .card-information > .price {
   color: rgb(var(--color-foreground));
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .card--horizontal .card-information > .price {

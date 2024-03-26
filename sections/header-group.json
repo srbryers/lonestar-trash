@@ -5,7 +5,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-left",
+        "logo_position": "center",
         "menu": "",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
@@ -17,7 +17,8 @@
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "show_search": false
       }
     },
     "announcement_bar_KckqjB": {
@@ -46,7 +47,7 @@
     }
   },
   "order": [
-    "header",
-    "announcement_bar_KckqjB"
+    "announcement_bar_KckqjB",
+    "header"
   ]
 }
