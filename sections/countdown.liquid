@@ -82,11 +82,13 @@
 
 <div class="countdown">
   <div class="countdown-container">
-    <div class="countdown-item days">
-      <span class="countdown-number" data-days>00</span>
-      <span class="countdown-label">DAYS</span>
-    </div>
-    {{ divider }}
+    {%- if section.settings.show_days -%}
+      <div class="countdown-item days">
+        <span class="countdown-number" data-days>00</span>
+        <span class="countdown-label">DAYS</span>
+      </div>
+      {{ divider }}
+    {%- endif -%}
     <div class="countdown-item hours">
       <span class="countdown-number" data-hours>00</span>
       <span class="countdown-label">HOURS</span>
@@ -176,6 +178,12 @@
       "id": "end_time",
       "label": "Time",
       "default": "00:00:00"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_days",
+      "label": "Show Days",
+      "default": true
     }
   ],
   "presets": [
