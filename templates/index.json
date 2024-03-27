@@ -2,9 +2,12 @@
   "sections": {
     "hero": {
       "type": "landing-hero-text",
+      "custom_css": [
+        "h1 {font-size: 76px; font-weight: 400; font-family: \"gin\", serif; color: black; line-height: 80px;}"
+      ],
       "settings": {
         "heading": "THE COLLECTION",
-        "padding_top": 0,
+        "padding_top": 48,
         "padding_bottom": 20,
         "full_width": false,
         "font_size": "10vw",
@@ -21,13 +24,16 @@
     },
     "feature_text": {
       "type": "landing-feature-text",
+      "custom_css": [
+        "p {line-height: 24px; color: black; font-family: \"halyard-text\"; font-weight: 400;}"
+      ],
       "settings": {
         "title": "",
         "text": "<p>Share your passion for waste disposal in style and comfort! Available for one day only. Bag 'em before they're gone. <\/p>",
         "text_alignment": "center",
         "content_width": 576,
         "font_size": 18,
-        "padding_top": 16,
+        "padding_top": 24,
         "padding_bottom": 20
       }
     },
