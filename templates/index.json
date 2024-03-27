@@ -3,7 +3,8 @@
     "hero": {
       "type": "landing-hero-text",
       "custom_css": [
-        "h1 {font-size: 76px; font-weight: 400; font-family: \"gin\", serif; color: black; line-height: 80px;}"
+        "h1 {font-size: 76px; font-weight: 400; font-family: \"gin\", serif; color: black; line-height: 80px;}",
+        "@media (max-width: 480px) {h1 {font-size: 61px; line-height: 64px; padding-top: 16px; }}"
       ],
       "settings": {
         "heading": "THE COLLECTION",
@@ -16,6 +17,9 @@
     },
     "countdown": {
       "type": "countdown",
+      "custom_css": [
+        "@media (max-width: 540px) {.countdown-container {gap: 16px; } .countdown-number {width: 72px; height: 72px; padding: 5px 10px 10px; font-size: 48px; } .countdown-label {font-size: 20px; }}"
+      ],
       "settings": {
         "end_date": "2024-04-01",
         "end_time": "00:00:00",
