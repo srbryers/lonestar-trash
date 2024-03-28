@@ -32,11 +32,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "countdown": {
           "type": "countdown",
           "settings": {
@@ -45,10 +40,9 @@
             "show_days": false
           }
         },
-        "share": {
-          "type": "share",
+        "description": {
+          "type": "description",
           "settings": {
-            "share_label": "Share"
           }
         }
       },
@@ -59,8 +53,7 @@
         "quantity_selector",
         "buy_buttons",
         "countdown",
-        "description",
-        "share"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": false,
