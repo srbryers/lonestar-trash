@@ -1,0 +1,200 @@
+{%- style -%}
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+  }
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .countdown-number {
+    border-radius: 8px;
+    background: var(--Black, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    padding: 10px;
+    color: var(--Orange, #e36e00);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'gin', 'Gin', serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 62.4px */
+  }
+  .countdown-label {
+    display: block;
+    color: var(--Orange, #e36e00);
+    width: 100%;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Gin;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+  }
+  .countdown-divider {
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 540px) {
+    .countdown-container {
+      gap: 8px;
+    }
+    .countdown-number {
+      width: 48px;
+      height: 48px;
+      padding: 4px 4px 8px;
+      font-size: 36px;
+    }
+    .countdown-label {
+      font-size: 15px;
+    }
+    .countdown-divider {
+      height: 68px;
+    }
+  }
+{%- endstyle -%}
+
+{%- capture divider -%}
+  <div class="countdown-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="black"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="black"/></svg>
+  </div>
+{%- endcapture -%}
+
+
+<div class="countdown">
+  <div class="countdown-container">
+    {%- if block.settings.show_days -%}
+      <div class="countdown-item days">
+        <span class="countdown-number" data-days>00</span>
+        <span class="countdown-label">DAYS</span>
+      </div>
+      {{ divider }}
+    {%- endif -%}
+    <div class="countdown-item hours">
+      <span class="countdown-number" data-hours>00</span>
+      <span class="countdown-label">HOURS</span>
+    </div>
+    {{ divider }}
+    <div class="countdown-item minutes">
+      <span class="countdown-number" data-minutes>00</span>
+      <span class="countdown-label">MINUTES</span>
+    </div>
+    {{ divider }}
+    <div class="countdown-item seconds">
+      <span class="countdown-number" data-seconds>00</span>
+      <span class="countdown-label">SECONDS</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  var countdown = new Countdown({
+    target: '.countdown'
+  });
+
+  countdown.start('{{ block.settings.end_date }} {{ block.settings.end_time }}');
+
+  function Countdown(options) {
+    var target = document.querySelector(options.target);
+    {%- if block.settings.show_days -%}var days = target.querySelector('[data-days]');{%- endif -%}
+    var hours = target.querySelector('[data-hours]');
+    var minutes = target.querySelector('[data-minutes]');
+    var seconds = target.querySelector('[data-seconds]');
+
+    var interval = null;
+
+    function start(endDate) {
+      var end = new Date(endDate);
+      var now = new Date();
+
+      if (end < now) {
+        clearInterval(interval);
+        return;
+      }
+
+      interval = setInterval(function() {
+        var now = new Date();
+        var distance = end - now;
+
+        var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        {%- if block.settings.show_days -%}days.textContent = d < 10 ? '0' + d : d;{%- endif -%}
+        hours.textContent = h < 10 ? '0' + h : h;
+        minutes.textContent = m < 10 ? '0' + m : m;
+        seconds.textContent = s < 10 ? '0' + s : s;
+
+        if (distance < 0) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
+
+    return {
+      start: start
+    };
+  }
+
+  window.Countdown = Countdown;
+
+</script>
+
+{%- schema -%}
+{
+  "name": "Countdown (Product)",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Date",
+      "default": "2024-12-31"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "Time",
+      "default": "00:00:00"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_days",
+      "label": "Show Days",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "category": "Promotion",
+      "name": "Countdown",
+      "settings": {
+        "end_date": "2024-12-31",
+        "end_time": "00:00:00"
+      }
+    }
+  ]
+}
+{%- endschema -%}

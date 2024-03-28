@@ -37,6 +37,14 @@
           "settings": {
           }
         },
+        "countdown": {
+          "type": "countdown",
+          "settings": {
+            "end_date": "2024-12-31",
+            "end_time": "23:59:59",
+            "show_days": "false"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -50,6 +58,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "countdown",
         "description",
         "share"
       ],

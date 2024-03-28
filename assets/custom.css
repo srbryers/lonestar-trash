@@ -126,6 +126,15 @@ body {
   right: 20px;
 }
 
+.cart-drawer .cart-items .cart-item__quantity .quantity__button {
+  height: 100%;
+}
+
+.cart-drawer .cart-items .cart-item__quantity .quantity__input {
+  pointer-events: none;
+  margin-top: -2px;
+}
+
 .cart-drawer .cart-items .cart-item__quantity cart-remove-button {
   display: none;
 }
@@ -317,6 +326,86 @@ body {
   gap: 20px;
   padding: 0 20px;
 }
+
+/* Product */
+.product .product__title h1 {
+  color: var(--Primary-Black, #2C2C2C);
+  /* Heading/Desktop/H2 */
+  font-family: 'gin';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 108.333% */
+}
+
+.product .price-regular .price-item--regular {
+  color: var(--Primary-Black, #2C2C2C);
+  font-family: "halyard-text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 140% */
+}
+
+.product .product-form__input .form__label {
+  color: var(--Primary-Black, #2C2C2C);
+  font-family: Gin;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 140% */
+}
+
+.product .product-form__input {
+  max-width: 160px;
+}
+
+.product .product-form__input .select:after {
+  display: none;
+}
+
+.product .product-form__input select {
+  background: white;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  color: var(--Primary-Black, #2C2C2C);
+  font-family: "halyard-text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 140% */
+}
+
+.product .product-form__input .quantity {
+  max-width: 160px;
+  background: white;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  color: var(--Primary-Black, #2C2C2C);
+  font-family: "halyard-text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.product .product-form__input .quantity:after {
+  display: none;
+}
+
+.product .product-form .shopify-payment-button__more-options {
+  display: none;
+}
+
+.product .product__media-icon {
+  background: white;
+}
+
 
 @media (max-width: 480px) {
   .custom .card__heading {

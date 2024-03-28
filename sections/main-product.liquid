@@ -538,7 +538,9 @@
               {% render 'icon-with-text',
                 block: block
               %}
-          {%- endcase -%}
+            {%- when 'countdown' -%}
+              {% render 'countdown', block: block %}
+            {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
@@ -868,6 +870,31 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "countdown",
+      "name": "Countdown",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "end_date",
+          "label": "Date",
+          "default": "2024-12-31"
+        },
+        {
+          "type": "text",
+          "id": "end_time",
+          "label": "Time",
+          "default": "00:00:00"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_days",
+          "label": "Show Days",
+          "default": true
+        }
+      ]
     },
     {
       "type": "share",
