@@ -28,7 +28,7 @@
       tabindex="-1"
     >
       <div class="drawer__header">
-        <h2 class="drawer__heading">Your Cart</h2>
+        <h2 class="drawer__heading">YOUR BAG</h2>
         <button
           class="drawer__close"
           type="button"
@@ -61,10 +61,10 @@
             </div>
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
+            <h4 class="cart-drawer__recommendations-title">RECOMMENDED FOR YOU</h4>
             <div class="cart-drawer__recommendations">
-              <h4 class="cart-drawer__recommendations-title">RECOMMENDED FOR YOU</h4>
               <div class="cart-drawer__collection">
-                {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
+                {% render 'cart-recommendations', collection: settings.cart_drawer_collection %}
               </div>
             </div>
           {%- endif -%}
@@ -278,7 +278,12 @@
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
                               <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                 <quantity-input class="quantity cart-quantity">
-                                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                  <button 
+                                    class="quantity__button no-js-hidden" 
+                                    name="minus" 
+                                    type="button"
+                                    data-variant-id="{{ item.variant.id }}"
+                                  >
                                     <span class="visually-hidden">
                                       {{-
                                         'products.product.quantity.decrease'
@@ -448,6 +453,7 @@
         </form>
       </cart-drawer-items>
       <div class="drawer__footer">
+        <div class="drawer__footer-border"> </div>
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>

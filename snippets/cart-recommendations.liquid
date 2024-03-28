@@ -1,0 +1,12 @@
+{%- for product in collection.products -%}
+  <div class="cart-drawer__recommendation">
+    <div class="cart-drawer__recommendation-image">
+      <img src="{{ product.featured_image.src | img_url: '300x300' }}" alt="{{ product.featured_image.alt | escape }}" width="100%" height="100%">
+    </div>
+    <div class="cart-drawer__recommendation-content">
+      <h4 class="cart-drawer__recommendation-title">{{ product.title }}</h4>
+      <p class="cart-drawer__recommendation-price">{{ product.price | money }}</p>
+      <a href="{{ product.url }}" class="cart-drawer__recommendation-link">View product</a>
+    </div>
+  </div>
+{%- endfor -%}
