@@ -142,9 +142,9 @@
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#fce477",
-          "button_label": "#121212",
-          "secondary_button_label": "#121212",
+          "button": "#e36e00",
+          "button_label": "#fff",
+          "secondary_button_label": "#e36e00",
           "shadow": "#121212"
         }
       },
