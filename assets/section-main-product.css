@@ -28,7 +28,7 @@
   }
 
   .product__info-wrapper {
-    padding: 0 0 0 5rem;
+    padding: 0 0 0 64px;
   }
 
   .product__info-wrapper--extra-padding {
@@ -59,7 +59,7 @@
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 64px;
     max-width: 45%;
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
