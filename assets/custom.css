@@ -328,6 +328,9 @@ body {
 }
 
 /* Product */
+.product {
+  padding: 0 0 64px;
+}
 .product .product__title h1 {
   color: var(--Primary-Black, #2C2C2C);
   /* Heading/Desktop/H2 */
@@ -419,6 +422,9 @@ body {
 }
 
 /* Product: Recommendations */
+product-recommendations.page-width {
+  padding: 0 20px;
+}
 product-recommendations .related-products__heading {
   text-align: center;
   color: var(--Black, #000);
@@ -428,6 +434,15 @@ product-recommendations .related-products__heading {
   font-style: normal;
   font-weight: 400;
   line-height: 80px;
+  margin: 64px 0 48px;
+}
+
+product-recommendations .product-grid {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 24px 64px; */
 }
 
 product-recommendation .card .card__information {
@@ -464,6 +479,10 @@ product-recommendations .card .card-information .price {
   .custom .card-information>.price {
     font-size: 14px;
     line-height: 16px;
+  }
+
+  .product {
+    padding: 0 0 24px;
   }
 
   product-recommendations .related-products__heading {
