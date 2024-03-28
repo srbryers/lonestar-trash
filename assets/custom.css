@@ -1,6 +1,66 @@
-html, body {
+html,
+body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Cart Drawer */
+#CartDrawer .drawer__inner {
+  border-radius: 20px 0px 0px 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+#CartDrawer .drawer__inner .drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#CartDrawer .drawer__inner .drawer__header .drawer__heading {
+  color: var(--Black, #000);
+  font-family: Gin;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+#CartDrawer .drawer__inner .drawer__header .drawer__close {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  min-width: initial;
+  min-height: initial;
+  right: initial;
+  top: initial;
+}
+
+/* Cart: Empty */
+#CartDrawer .cart-drawer__empty-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+#CartDrawer .cart-drawer__empty-content .cart-drawer__empty-message h3 {
+  margin: 0;
+  color: var(--Black, #000);
+  text-align: center;
+  /* Heading/Desktop/H2 */
+  font-family: Gin;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 108.333% */
 }
 
 @media (max-width: 480px) {
@@ -8,7 +68,8 @@ html, body {
     font-size: 18px;
     line-height: 20px;
   }
-  .custom .card-information > .price {
+
+  .custom .card-information>.price {
     font-size: 14px;
     line-height: 16px;
   }
