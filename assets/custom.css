@@ -423,7 +423,7 @@ body {
 
 /* Product: Recommendations */
 product-recommendations.page-width {
-  padding: 0 20px;
+  padding: 0 20px 64px;
 }
 product-recommendations .related-products__heading {
   text-align: center;
@@ -442,7 +442,6 @@ product-recommendations .product-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap: 24px 64px; */
 }
 
 product-recommendation .card .card__information {
