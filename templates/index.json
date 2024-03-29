@@ -43,6 +43,9 @@
     },
     "featured_collection_QT9Dwy": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection {padding-bottom: 120px;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
