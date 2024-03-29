@@ -31,7 +31,7 @@
       "type": "header",
       "custom_css": [
         "details-modal {display: none;}",
-        "header {max-width: 1600px;}"
+        "header {max-width: 1600px; padding-right: 48px; padding-left: 48px;}"
       ],
       "settings": {
         "logo_position": "center",
