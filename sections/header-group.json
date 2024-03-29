@@ -30,7 +30,8 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "details-modal {display: none;}"
+        "details-modal {display: none;}",
+        "header {max-width: 1600px;}"
       ],
       "settings": {
         "logo_position": "center",
