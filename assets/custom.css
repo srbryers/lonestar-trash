@@ -335,6 +335,9 @@ body {
 .product {
   padding: 0 0 64px;
 }
+.product .product__title {
+  margin: 0 0 12px;
+}
 .product .product__title h1 {
   color: var(--Primary-Black, #2C2C2C);
   /* Heading/Desktop/H2 */
@@ -344,6 +347,18 @@ body {
   font-weight: 400;
   line-height: 52px;
   /* 108.333% */
+}
+
+.product .price {
+  line-height: 1;
+}
+
+.product .price .price__container {
+  margin: 0;
+}
+
+.product .product__info-container > * + * {
+  margin: 20px 0;
 }
 
 .product .price-regular .price-item--regular {
