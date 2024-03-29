@@ -143,6 +143,10 @@ body {
   background: white;
 }
 
+.cart-drawer .cart-items .cart-item__quantity quantity-popover .quantity:after {
+  display: none;
+}
+
 .cart-drawer .cart-items .cart-item__quantity quantity-popover .quantity-popover-container .quantity {
   display: flex;
   height: 32px;
