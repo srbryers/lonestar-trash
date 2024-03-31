@@ -491,6 +491,10 @@ div.product.grid {
     gap: 20px;
   }
 
+  .product media-gallery .global-media-settings {
+    background-color: transparent;
+  }
+
   .product media-gallery slider-component {
     flex: 1;
   }
