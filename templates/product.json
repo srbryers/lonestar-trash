@@ -77,7 +77,7 @@
     "related-products": {
       "type": "related-products",
       "custom_css": [
-        ".related-products__heading {margin-top: 24px;}"
+        ".related-products__heading {margin-top: 40px;}"
       ],
       "settings": {
         "heading": "Related products",
