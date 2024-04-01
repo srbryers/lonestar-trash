@@ -600,4 +600,20 @@ product-recommendations .card .card-information .price {
     font-weight: 400;
     line-height: 64px;
   }
+
+  product-recommendations .card .card__heading {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 111.111% */
+  }
+
+  product-recommendations .card .card-information .price {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 114.286% */
+  }
 }
