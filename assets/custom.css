@@ -95,8 +95,15 @@ body {
   padding: 0;
   height: 140px;
   min-width: 112px;
+  max-width: 40%;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 749px) {
+  #CartDrawer-Form .drawer__cart-items-wrapper tbody[role="rowgroup"] tr {
+    gap: 16px;
+  }
 }
 
 #CartDrawer-Form .drawer__cart-items-wrapper .cart-item__details {
