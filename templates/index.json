@@ -21,9 +21,9 @@
         "@media (max-width: 540px) {.countdown-container {gap: 16px; } .countdown-number {width: 72px; height: 72px; padding: 5px 10px 10px; font-size: 48px; } .countdown-label {font-size: 20px; }}"
       ],
       "settings": {
-        "end_date": "2024-04-01",
+        "end_date": "2024-04-03",
         "end_time": "00:00:00",
-        "show_days": false
+        "show_days": true
       }
     },
     "feature_text": {
