@@ -107,6 +107,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media (max-width: 749px) {
+    .header {
+      padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 20px {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 20px !important;
+    }
+  }
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
