@@ -35,7 +35,7 @@
         "countdown": {
           "type": "countdown",
           "settings": {
-            "end_date": "2024-12-31",
+            "end_date": "2024-04-02",
             "end_time": "23:59:59",
             "show_days": false
           }
