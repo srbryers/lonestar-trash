@@ -18,6 +18,31 @@
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+{%- style -%}
+  .announcement-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .announcement-bar__message {
+    font-family: 'halyard-text';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+  }
+
+  @media (max-width: 540px) {
+    .utility-bar__grid {
+      padding: 0 8px !important;
+    }
+    .announcement-bar__message {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+{%- endstyle -%}
+
 <div
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
   style="background-color: {{ section.settings.background_color }}"
@@ -41,12 +66,22 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
+          <img
+            src="https://cdn.shopify.com/s/files/1/0644/4292/5253/files/star.svg?v=1711977589"
+            width="16"
+            height="16"
+          >
           <p class="announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
             {%- endif -%}
           </p>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0644/4292/5253/files/star.svg?v=1711977589"
+            width="16"
+            height="16"
+          >
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
           {%- endif -%}
